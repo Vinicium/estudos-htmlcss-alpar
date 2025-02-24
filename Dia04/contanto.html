@@ -20,27 +20,27 @@ Depois de criar a página, conecte-a com o seu portfólio e suba para o GitHub. 
 
 <body>
 
-    <form>
+    <form id="form1">
 
         <label for="">
             <p>Nome</p>
-            <input type="text" placeholder="Digite seu nome" required>
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
         </label>
         <label for="">
             <p>Email</p>
-            <input type="email" placeholder="abc@gmail.com" required>
+            <input type="email" id="email" placeholder="abc@gmail.com" required>
         </label>
         <label for="">
             <p>Telefone</p>
-            <input type="tel" placeholder="(11) 99999-9999">
+            <input type="tel" id="telefone" placeholder="(11) 99999-9999">
         </label>
         <label for="">
             <p>Assunto</p>
-            <input type="text" placeholder="Digite o assunto" required>
+            <input type="text" id="assunto" placeholder="Digite o assunto" required>
         </label>
         <label for="">
             <p>Mensagem</p>
-            <textarea name="mensagem" id="" placeholder="Digite aqui sua mensagem" required></textarea>
+            <textarea name="mensagem" id="mensagem" placeholder="Digite aqui sua mensagem" required></textarea>
         </label>
 
 
@@ -48,8 +48,32 @@ Depois de criar a página, conecte-a com o seu portfólio e suba para o GitHub. 
         <br>
         <button type="submit">Enviar</button>
 
+
+
+
     </form>
 
+  <!--   <script>
+
+        const form = document.getElementById("form1");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const telefone = document.getElementById("telefone").value;
+            const assunto = document.getElementById("assunto").value;
+            const mensagem = document.getElementById("mensagem").value;
+
+            alert(`Dados enviados:
+            Nome: ${nome}
+            Email: ${email}
+            Telefone: ${telefone}
+            Assunto: ${assunto}
+            Mensagem: ${mensagem}`);
+        });
+    </script> -->
 
 
 </body>
