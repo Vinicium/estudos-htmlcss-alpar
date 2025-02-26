@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mago Cast</title>
-    <style>
+ 
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofadi+One&display=swap');
 
         * {
@@ -90,7 +83,7 @@
 
         #container2 {
             height: 350px;
-            background-image: url('fundo.webp');
+            background-image: url('../images/fundo.webp');
             background-position: center;
             background-size: cover;
             background-attachment: fixed;
@@ -115,7 +108,7 @@
 
         #container3 {
             height: 350px;
-            background-image: url('fundo.webp');
+            background-image: url('../images/fundo.webp');
             background-position: center;
             background-size: cover;
             background-attachment: fixed;
@@ -162,75 +155,4 @@
                 cursor: pointer;
             }
         }
-    </style>
-</head>
-
-<body>
-    <header class="flexbox">
-        <div>
-            <img src="logo.png" alt="">
-        </div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="../">Portifolio</a>
-            <a href="#creditos">Creditos</a>
-        </nav>
-    </header>
-
-    <section class="flexbox" id="container-video">
-        <div class="content-about">
-            <h1>Mago Cast</h1>
-            <p>O Mago Cast é um podcast focado em tecnologia e jogos, apresentado por entusiastas que discutem
-                novidades, tendências e curiosidades desses dois universos. Os episódios abordam desde lançamentos de
-                games e gadgets até análises sobre o impacto da tecnologia no cotidiano. Com um tom descontraído e
-                informativo, o podcast busca entreter e informar tanto gamers quanto tech lovers, sempre com dicas,
-                opiniões e debates envolventes. Ideal para quem quer ficar por dentro do mundo geek de forma leve e
-                divertida! 🎮✨</p>
-        </div>
-        <div class="content-video">
-            <video src="0225.mp4" controls width="300px" height="300px"></video>
-        </div>
-    </section>
-
-    <section id="container2" class="flexbox">
-        <div class="content-about">
-            <h1>IA em chefes de jogos</h1>
-            <p>
-                IA do Boss de Mir 5: Sistema avançado que adapta comportamento com base nas ações dos jogadores, usando
-                habilidades especiais, contra-ataques e mudanças de fases. Prioriza alvos e exige estratégia em equipe,
-                elevando o desafio e a imersão. 🎮💡
-            </p>
-        </div>
-        <div class="container-video">
-            <audio src="audio1.MP3" controls></audio>
-        </div>
-    </section>
-
-    <section id="container3" class="flexbox">
-        <div class="container-video">
-            <audio src="audio2.MP3" controls></audio>
-        </div>
-        <div class="content-about">
-            <h1>Geração de Frames por IA</h1>
-            <p>Geração de frames por IA: Técnica que usa inteligência artificial para criar ou preencher quadros
-                (frames) em vídeos, melhorando fluidez ou gerando cenas realistas. Usada em games, filmes e edição de
-                vídeos para otimizar performance e qualidade visual. </p>
-        </div>
-    </section>
-
-    <footer id="creditos" class="flexbox">
-        <div class="flexbox" style="flex-direction: row;">
-            <div id="credits-members">
-                <ul>
-                    <li>Macelo Augusto - Visual</li>
-                    <li>Vicinius Ribeiro - Editor</li>
-                    <li>Luan Pereira - Roteiro</li>
-                </ul>
-            </div>
-            
-        </div>
-         
-    </footer>
-</body>
-
-</html>
+   
