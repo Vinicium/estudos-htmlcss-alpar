@@ -13,27 +13,100 @@
 }
  
  
-
+body{
+    background-color: #846f4eb5;
+    box-sizing: border-box;
+    padding: 20px;
+  
+}
 #menu{
-
- text-align: center;
+    padding-bottom: 10px;
+}
+#menu a{
+ 
+ text-decoration: none;
+ color: #f4f4f9;
+ padding: 10px;
+ font-size: 25px;
+ 
+ 
 }
 
 #logo{
     display: flex;
     width: 150px;
-   align-self: center;
+   padding: 10px;
  
 
 }
 
-header{
-
-background-color: aqua;
-
+#bemvindo{
+    margin: 10px;
+p{
+    
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+   
 }
 
-#tabelas{
+header{
+
+background-color: rgb(131, 96, 59);
+margin: -20px;
+margin-bottom: 20px;
+}
+
+#tabelas {
     display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#tabelas div {
+    flex: 1;
+    background: #f4f4f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#tabelas h3 {
+    text-align: center;
+    color: #333;
+}
+
+#tabelas ol {
+    padding-left: 20px;
+    color: #555;
+}
+
+#tabelas ol li {
+    margin-bottom: 5px;
+}
+
+
+#tabela{
+display: flex;
+align-items: center;
+justify-content: center;
+
+table{
+
+    background-color: #f4f4f9;
+    margin-bottom: 60px;
+}
+th{
+    background-color: rgb(131, 96, 59);
+    color: #f4f4f9;
+}
+}
+
+footer{
+ 
+    background-color: rgb(131, 96, 59);
+    text-align: center;
+    padding: 30px;
+    margin: -20px;
 
 }
