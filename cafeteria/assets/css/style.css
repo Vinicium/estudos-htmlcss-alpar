@@ -16,13 +16,13 @@
 
 #menu{
 
-    justify-content: end;
-    display: flex;
+ text-align: center;
 }
 
 #logo{
     display: flex;
     width: 150px;
+   align-self: center;
  
 
 }
@@ -30,5 +30,10 @@
 header{
 
 background-color: aqua;
+
+}
+
+#tabelas{
+    display: flex;
 
 }
