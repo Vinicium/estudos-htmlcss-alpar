@@ -6,7 +6,29 @@
     box-shadow: none;
     font-family: "Poppins", sans-serif;
     font-style: normal;
+ margin: 0px;
+
 
 
 }
  
+ 
+
+#menu{
+
+    justify-content: end;
+    display: flex;
+}
+
+#logo{
+    display: flex;
+    width: 150px;
+ 
+
+}
+
+header{
+
+background-color: aqua;
+
+}

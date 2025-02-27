@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofadi+One&display=swap");
+
+* {
+  color: rgb(255, 255, 255);
+
+  box-shadow: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background: linear-gradient(200deg, rgb(43, 54, 135), rgb(124, 124, 124));
+  min-height: 100vh;
+}
+
+#ve {
+  width: 140px;
+  height: 145px;
+  border-radius: 120px;
+}
+#sobre {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#sobretexto {
+  width: 50%;
+  display: flex;
+ 
+  margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+#links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+  }
+  
+  #links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;  
+  }
+  
+  #links div {
+    width: 100px; /* Largura menor */
+ margin: 0;
+    background-color: #3e3e3e;
+ 
+    padding: 5px 10px; /* Menos espaço interno */
+    border-radius: 20px;
+    text-align: center;
+ 
+  }
+  
+ 
