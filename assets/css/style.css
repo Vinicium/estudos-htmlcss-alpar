@@ -15,12 +15,21 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+ margin-top: 100px;
 }
 
-#menu {
+#head {
   justify-content: end;
-
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
   display: flex;
+
+  #menu{
+    position: fixed;
+    margin-top: 20px;
+  }
 }
 
 a {
@@ -43,6 +52,7 @@ header {
 }
 
 #content {
+  
   display: flex;
   padding-right: 25px;
   h1 {
@@ -54,7 +64,7 @@ header {
   background-color: rgb(28, 28, 28);
   margin-top: 40px;
   display: flex;
-    margin: 50px;
+  margin: 50px;
   height: 250px;
   flex-direction: column;
 
@@ -80,60 +90,50 @@ footer {
   p {
     padding: 20px;
     text-align: center;
-   
   }
 }
 
-#sobre-rocket{
-    background-color: rgb(28, 28, 28);
-    margin: 90px;
-    padding: 30px;
-    font-size: 20px;
-    p{
-
-        margin: 25px;
-
-    }
-
+#sobre-rocket {
+  background-color: rgb(28, 28, 28);
+  margin: 90px;
+  padding: 30px;
+  font-size: 20px;
+  p {
+    margin: 25px;
+  }
 }
 
-
-#atividades{
-
-
-    display: flex;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    padding: 40px 0px;
-    div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 160px;
-        height: 40px;
-        margin: 0px 40px;
-        background-color: rgb(55, 55, 55);
-        transition: 0.3s ease;
-        border-radius: 20px;
-    }
-    div:hover{
-        background-color: rgb(87, 188, 255);
-
-    }
- 
-}
-#titulo{
-
-    margin-top: 90px;
+.atividades {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 40px 0px;
+  div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-   h2{
+    width: 160px;
+    height: 40px;
+    margin: 0px 40px;
+    background-color: rgb(55, 55, 55);
+    transition: 0.3s ease;
+    border-radius: 20px;
+    color: aliceblue;
+  }
+  div:hover {
+    background-color: rgb(87, 188, 255);
+  }
+}
+#titulo {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  h2 {
     background-color: rgb(40, 40, 40);
     padding: 10px;
     border-radius: 10px;
-   }
-
+  }
 }

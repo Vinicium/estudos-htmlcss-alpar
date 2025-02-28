@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+
+    
+    box-shadow: none;
+    font-family: "Open-Sans", sans-serif;
+    font-style: normal;
+    
+
+}
+
+body{
+
+    padding-top: 30px;
+    background: linear-gradient(200deg, rgba(220, 220, 220, 0.468), rgba(67, 67, 67, 0.31));
+
+}
+header{
+
+    background: linear-gradient(200deg, rgb(185, 185, 185), rgb(143, 143, 143));
+
+padding: 10px;
+ 
+position: fixed;
+right: 0; 
+left: 0;
+top: 0;
+margin-bottom: 100px;
+
+ 
+
+}
+
+
+#port{
+
+text-align: end;
+
+}
+ 
+header a{
+    color: azure;
+    text-decoration: none;
+ font-size: 20px;
+    
+    background-color: rgb(67, 67, 67);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#title{
+
+    margin: 10px;
+
+
+}
+
+.ropas-fotos{
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.ropas-fotos div {
+    flex: 1;
+    background-color: rgba(143, 143, 143, 0.514);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+
+    background-color: rgba(0, 0, 0, 0.23);
+    margin: 0px -10px -10px -10px;
+    padding: 3px;
+    color: aliceblue;
+    text-align: center;
+
+
+}
