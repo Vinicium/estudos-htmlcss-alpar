@@ -123,11 +123,11 @@ footer {
     transition: 0.3s ease;
     border-radius: 20px;
     color: aliceblue;
-
-    border: 3px solid rgb(71, 71, 71);
+ 
   }
   div:hover {
     background-color: rgb(87, 188, 255);
+    transform: scale(1.2);
   }
 }
 #titulo {
