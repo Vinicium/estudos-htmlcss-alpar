@@ -109,6 +109,8 @@ footer {
   text-align: center;
   justify-content: center;
   padding: 40px 0px;
+  flex-direction: row;
+  justify-content: space-evenly;
   div {
     display: flex;
     justify-content: center;
@@ -118,7 +120,7 @@ footer {
     margin: 0px 40px;
     background-color: rgb(55, 55, 55);
     transition: 0.3s ease;
-    border-radius: 20px;
+    border-radius: 20px; 
     color: aliceblue;
   }
   div:hover {
