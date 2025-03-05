@@ -6,16 +6,22 @@
   font-style: normal;
 }
 
+
+ 
+
 body {
-  padding-top: 30px;
-  background: linear-gradient(
+  padding-top: 60px;
+ background-color: rgba(0, 0, 0, 0.862);
+
+
+ /*  background: linear-gradient(
     200deg,
     rgba(220, 220, 220, 0.468),
     rgba(67, 67, 67, 0.31)
-  );
+  ); */
 }
 header {
-  background: linear-gradient(200deg, rgb(185, 185, 185), rgb(143, 143, 143));
+ background-color: rgb(98, 98, 98);
 
   padding: 10px;
 
@@ -30,27 +36,34 @@ header {
   text-align: end;
 }
 
+header nav {
+  
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
 header a {
+  
+  display: inline-block;
   color: rgb(223, 223, 223);
   text-decoration: none;
   font-size: 20px;
-
-  background-color: rgb(47, 47, 47);
+  
   padding: 5px;
   border-radius: 2px;
   transition: 0.6s ease;
- 
 }
 
- 
-
-a:hover {
+header a:hover {
   background-color: rgb(177, 177, 177);
   transform: scale(1.1);
 }
 
 #title {
-  margin: 10px;
+  margin: 25px;
+  font-size: 20px;
+  color: aliceblue;
 }
 
 .ropas-fotos {
@@ -61,19 +74,34 @@ a:hover {
 
 .ropas-fotos div {
   flex: 1;
-  background-color: rgba(143, 143, 143, 0.514);
+  
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+
+  img{
+    background-color: rgba(255, 255, 255, 0.974);
+    padding: 10px;
+    border-radius: 5px;
+}
+        h3{
+            background-color: rgb(69, 69, 69);
+            padding: 10px;
+            color: aliceblue;
+            border-radius: 5px;
+        }
 }
 
 footer {
   background-color: rgba(0, 0, 0, 0.23);
-  margin: 0px -10px -10px -10px;
+ margin: -8px;
   padding: 3px;
   color: aliceblue;
   text-align: center;
+    margin-top: 40px;
+
 }

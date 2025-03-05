@@ -15,7 +15,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
- margin-top: 100px;
+  margin-top: 100px;
 }
 
 #head {
@@ -26,7 +26,7 @@ body {
   top: 0;
   display: flex;
 
-  #menu{
+  #menu {
     position: fixed;
     margin-top: 20px;
   }
@@ -52,10 +52,9 @@ header {
 }
 
 #content {
-  
   display: flex;
   padding-left: 10px;
-  
+
   h1 {
     margin-left: 55px;
   }
@@ -112,7 +111,7 @@ footer {
   padding: 40px 0px;
   flex-direction: row;
   justify-content: space-evenly;
-  
+
   div {
     display: flex;
     justify-content: center;
@@ -122,9 +121,9 @@ footer {
     margin: 0px 40px;
     background-color: rgb(55, 55, 55);
     transition: 0.3s ease;
-    border-radius: 20px; 
+    border-radius: 20px;
     color: aliceblue;
-   
+
     border: 3px solid rgb(71, 71, 71);
   }
   div:hover {
@@ -137,11 +136,10 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  
+
   h2 {
     background-color: rgb(60, 60, 60);
     padding: 20px;
     border-radius: 20px;
-    
   }
 }
