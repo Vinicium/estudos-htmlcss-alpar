@@ -47,11 +47,13 @@ main {
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 100px;
+    
     div {
       justify-items: center;
       align-items: center;
       background-color: rgb(79, 79, 79);
       padding: 10px;
+      border-radius: 5px;
     }
   }
 
