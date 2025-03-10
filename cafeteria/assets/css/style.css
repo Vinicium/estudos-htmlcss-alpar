@@ -69,6 +69,7 @@ margin-bottom: 20px;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px black;
 }
 
 #tabelas h3 {
@@ -91,10 +92,13 @@ display: flex;
 align-items: center;
 justify-content: center;
 
+
 table{
 
     background-color: #f4f4f9;
     margin-bottom: 60px;
+    box-shadow: 0 0 5px black;
+    border: #000000;
 }
 th{
     background-color: rgb(131, 96, 59);

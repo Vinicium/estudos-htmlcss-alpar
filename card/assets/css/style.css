@@ -22,6 +22,7 @@ body {
   width: 140px;
   height: 145px;
   border-radius: 120px;
+  box-shadow: 0 0 5px black;
 }
 #sobre {
   margin-bottom: 50px;
@@ -42,10 +43,13 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  
+   
 
   div:hover {
     transition: 0.7s ease;
     background-color: rgb(87, 188, 255);
+ 
   }
 
 }
