@@ -204,16 +204,17 @@ footer {
 
 @media (max-width: 600px) {
   #head {
-     nav{
- 
-     }
-
+    padding: 0;
+    padding-right: 15px;
+   
   }
 
-  #menu a{
-
+  #menu a {
     font-size: 12px;
-   }
+
+    column-gap: 1px;
+    
+  }
 
   #fundo {
     h2 {
@@ -229,20 +230,12 @@ footer {
     font-size: 13px;
   }
 
+  .atividades div {
+    width: 200px;
+    height: auto;
 
-.atividades div{
-
-
-width: 200px;
-height: auto;
-
-img{
-
-  width: 100%;
-}
-
-
-}
-
- 
+    img {
+      width: 100%;
+    }
+  }
 }
