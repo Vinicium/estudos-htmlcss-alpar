@@ -204,8 +204,17 @@ footer {
 
 @media (max-width: 600px) {
   #head {
-    display: none;
+     nav{
+ 
+     }
+
   }
+
+  #menu a{
+
+    font-size: 12px;
+   }
+
   #fundo {
     h2 {
       font-size: 20px;
@@ -217,7 +226,7 @@ footer {
   }
 
   #titulo p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
 
@@ -225,6 +234,7 @@ footer {
 
 
 width: 200px;
+height: auto;
 
 img{
 
