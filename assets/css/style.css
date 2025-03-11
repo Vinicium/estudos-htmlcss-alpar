@@ -58,14 +58,13 @@ header {
   background-color: rgb(22, 22, 22);
 }
 
-
 #content {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  width: auto ;
+  width: auto;
 
   height: auto;
 
@@ -75,15 +74,13 @@ header {
   }
 }
 
-
 #foto {
   width: 70%;
- 
+
   display: flex;
   border-radius: 40px;
   box-shadow: 0 0 10px rgb(0, 0, 0);
   margin-top: 10px;
-  
 }
 .fotocontainer {
   display: flex;
@@ -94,10 +91,7 @@ header {
 
   row-gap: 25px;
   min-width: 200px;
-
 }
-
-
 
 #fundo {
   background-color: rgb(28, 28, 28);
@@ -107,9 +101,8 @@ header {
 
   flex-direction: column;
   box-shadow: 0 0 10px black;
-  
+
   max-width: 65%;
-  
 
   p {
     padding: 30px;
@@ -130,6 +123,7 @@ footer {
   align-items: center;
   justify-content: center;
   margin-top: 200px;
+  width: 100%;
   p {
     padding: 20px;
     text-align: center;
@@ -142,7 +136,7 @@ footer {
   margin-top: 10px;
   text-align: center;
   justify-content: center;
-  padding: 40px 0px;
+   
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -157,7 +151,7 @@ footer {
     box-sizing: border-box;
     padding: 10px;
     flex-direction: column;
-    gap: 15px;
+    
     margin: 0px 40px;
     background-color: rgb(55, 55, 55);
     transition: 0.3s ease;
@@ -192,6 +186,7 @@ footer {
   width: 100%;
   flex-direction: column;
   gap: 10px;
+  
   h2 {
     background-color: rgb(60, 60, 60);
     padding: 20px;
@@ -204,6 +199,28 @@ footer {
     font-size: 20px;
     padding: 5px;
     border-radius: 10px;
+    margin-bottom: 30px;
     color: aliceblue;
   }
+}
+
+@media (max-width: 600px) {
+  #head {
+    display: none;
+  }
+  #fundo {
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  #titulo p{
+    font-size: 10px;
+  }
+
+ 
 }
