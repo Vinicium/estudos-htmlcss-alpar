@@ -136,7 +136,7 @@ footer {
   margin-top: 10px;
   text-align: center;
   justify-content: center;
-   
+  padding: 40px 0px;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -151,7 +151,7 @@ footer {
     box-sizing: border-box;
     padding: 10px;
     flex-direction: column;
-    
+    gap: 15px;
     margin: 0px 40px;
     background-color: rgb(55, 55, 55);
     transition: 0.3s ease;
@@ -186,7 +186,6 @@ footer {
   width: 100%;
   flex-direction: column;
   gap: 10px;
-  
   h2 {
     background-color: rgb(60, 60, 60);
     padding: 20px;
@@ -199,7 +198,6 @@ footer {
     font-size: 20px;
     padding: 5px;
     border-radius: 10px;
-    margin-bottom: 30px;
     color: aliceblue;
   }
 }
@@ -218,9 +216,23 @@ footer {
     }
   }
 
-  #titulo p{
-    font-size: 10px;
+  #titulo p {
+    font-size: 14px;
   }
+
+
+.atividades div{
+
+
+width: 200px;
+
+img{
+
+  width: 100%;
+}
+
+
+}
 
  
 }
