@@ -146,8 +146,8 @@ footer {
     display: flex;
 
     align-items: center;
-    width: 250px;
-    height: 200px;
+    width: 225px;
+    height: 175;
     box-sizing: border-box;
     padding: 10px;
     flex-direction: column;
