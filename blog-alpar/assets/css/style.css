@@ -112,7 +112,7 @@ article {
   width: 90%;
   padding: 25px;
   background-color: rgb(206, 206, 206);
-  margin: 30px auto;
+  margin: 40px auto;
   border: 2px solid black;
   img {
     height: auto;
@@ -131,6 +131,7 @@ footer {
 @media (max-width: 600px) {
   body {
     display: flex;
+    grid-template-areas: "header header" "main main" "footer footer";
   }
   aside {
     display: none;
@@ -144,15 +145,18 @@ footer {
       font-size: 40px;
     }
   }
+ article{
 
-  body {
-    grid-template-areas: "header header" "main main" "footer footer";
-  
-  }
+  margin-top: 160px ;
+ }
 
-  #titulo button {
-    display: flex;
+ 
+  #titulo  {
+
+ 
+
+    button{display: flex;
     left: 85%;
-    top: 25%;
+    top: 25%;}
   }
 }
