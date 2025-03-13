@@ -94,7 +94,7 @@ header {
 }
 
 #fundo {
-  background-color: rgb(28, 28, 28);
+  background-color: rgb(55, 55, 55);
   margin-top: 40px;
   display: flex;
   margin: 50px;
@@ -165,7 +165,7 @@ footer {
     }
 
     p {
-      background-color: rgb(46, 46, 46);
+     
       color: aliceblue;
       padding-top: 5px;
       border-radius: 20px;

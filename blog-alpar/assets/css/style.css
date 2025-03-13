@@ -130,9 +130,35 @@ footer {
   grid-area: footer;
 }
 
+
+.active{
+
+  display: flex !important; 
+
+
+}
+
 @media (max-width: 600px) {
+
+  body{
+
+    display: flex;
+
+  }
   aside {
    display: none;
+   z-index: 999;
+margin-top: 10px;
+width: 100%;
+justify-content: center;
+align-items: center;
+
+#menu{
+font-size: 40px;
+
+
+}
+
   }
 
   body{
