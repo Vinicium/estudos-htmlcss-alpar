@@ -26,8 +26,6 @@ body {
   position: fixed;
   right: 0;
   left: 0;
- 
-  
 
   h1 {
     margin: 0;
@@ -38,16 +36,13 @@ body {
     margin: 0;
     margin-top: 5px;
   }
-  button{ 
- 
+  button {
     position: absolute;
-    left:110%;
+    left: 110%;
     top: 34%;
     border: 0;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
-    
- 
   }
 }
 
@@ -104,14 +99,13 @@ main {
 
   box-sizing: border-box;
   display: inline-block;
-  p{
+  p {
     text-indent: 30px;
   }
-  li{
+  li {
     padding-bottom: 8px;
   }
 }
-
 
 article {
   box-sizing: border-box;
@@ -130,46 +124,35 @@ footer {
   grid-area: footer;
 }
 
-
-.active{
-
-  display: flex !important; 
-
-
+.active {
+  display: flex !important;
 }
 
 @media (max-width: 600px) {
-
-  body{
-
+  body {
     display: flex;
-
   }
   aside {
-   display: none;
-   z-index: 999;
-margin-top: 10px;
-width: 100%;
-justify-content: center;
-align-items: center;
+    display: none;
+    z-index: 999;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 
-#menu{
-font-size: 40px;
-
-
-}
-
+    #menu {
+      font-size: 40px;
+    }
   }
 
-  body{
+  body {
     grid-template-areas: "header header" "main main" "footer footer";
+  
   }
 
-  #titulo button{
-
-     display: flex;
-    left:90%;
+  #titulo button {
+    display: flex;
+    left: 85%;
     top: 25%;
-    
   }
 }
