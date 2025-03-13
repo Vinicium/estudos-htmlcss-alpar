@@ -117,6 +117,7 @@ const posts = [
           vivemos, trabalhamos e nos comunicamos.
         </p>
     `,
+    active: true,
 },
 {
     id: "2",
@@ -205,6 +206,7 @@ const posts = [
           Essencialmente, uma rede de computadores é o que conecta o mundo
           digital, permitindo trocas de dados rápidas e eficientes.
         </p>`,
+        active: true,
 },
 {
     id: "3",
@@ -290,6 +292,7 @@ const posts = [
           estilo ou interatividade, é necessário usar CSS (para estilização) e
           JavaScript (para comportamento dinâmico).
         </p>`,
+        active: true,
 },
 
 {
@@ -356,6 +359,7 @@ const posts = [
           Com o CSS, você transforma páginas simples em designs únicos e
           agradáveis!
         </p>`,
+        active: true,
 },
 ]
 
@@ -377,7 +381,7 @@ postElem.innerHTML = post.content;
 
 }
 
-posts.forEach(addpost);
+posts.filter(item => item.active).forEach(addpost);
 
 
 /* for (let i=0;i< posts.length; i++)

@@ -15,7 +15,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 #head {
@@ -36,8 +36,25 @@ body {
 
     a {
       transition: 0.5s ease;
+      position: relative;
     }
   }
+}
+
+
+#head #menu a::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+#head #menu a:hover::before {
+  width: 100%;
+  
 }
 
 a {
@@ -46,11 +63,7 @@ a {
   margin: 5px;
   font-size: 20px;
 }
-#menu a:hover {
-  background-color: aliceblue;
-  color: black;
-  border-radius: 5px;
-}
+ 
 
 header {
   height: 70px;
@@ -78,7 +91,7 @@ header {
   width: 70%;
 
   display: flex;
-  border-radius: 40px;
+  border-radius: 60px;
   box-shadow: 0 0 10px rgb(0, 0, 0);
   margin-top: 10px;
 }
@@ -89,19 +102,25 @@ header {
   justify-content: center;
   width: 25%;
 
-  row-gap: 25px;
+  row-gap: 30px;
   min-width: 200px;
+
+  h1{
+
+    font-size: 30px;
+
+  }
 }
 
 #fundo {
-  background-color: rgb(55, 55, 55);
+  background-color: rgba(22, 22, 22, 0.967);
   margin-top: 40px;
   display: flex;
   margin: 50px;
 
   flex-direction: column;
   box-shadow: 0 0 10px black;
-
+border-radius: 10px;
   max-width: 65%;
 
   p {
@@ -133,7 +152,7 @@ footer {
 .atividades {
   display: flex;
   width: 100%;
-  margin-top: 10px;
+ 
   text-align: center;
   justify-content: center;
   padding: 40px 0px;
@@ -153,7 +172,7 @@ footer {
     flex-direction: column;
     gap: 15px;
     margin: 0px 40px;
-    background-color: rgb(55, 55, 55);
+    background-color: rgba(22, 22, 22, 0.921);
     transition: 0.3s ease;
     border-radius: 20px;
     color: rgb(255, 255, 255);
@@ -165,7 +184,7 @@ footer {
     }
 
     p {
-     
+    
       color: aliceblue;
       padding-top: 5px;
       border-radius: 20px;
@@ -173,29 +192,28 @@ footer {
     }
   }
   div:hover {
-    background-color: rgb(87, 188, 255);
+    background-color: rgba(255, 255, 255, 0.464);
     transform: scale(1.2);
+    p{
+      color: black;
+    }
   }
 }
 
 #titulo {
-  margin-top: 60px;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   flex-direction: column;
   gap: 10px;
-  h2 {
-    background-color: rgb(60, 60, 60);
-    padding: 20px;
-    color: rgb(255, 255, 255);
-    border-radius: 20px;
-    box-shadow: 0 0 5px black;
-  }
+  margin-top: 80px;
+  margin-bottom: 50px;
+   
   p {
-    background-color: rgb(58, 58, 58);
-    font-size: 20px;
+    background-color: rgba(22, 22, 22, 0.962);
+    font-size: 25px;
     padding: 5px;
     border-radius: 10px;
     color: aliceblue;
