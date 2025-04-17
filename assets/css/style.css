@@ -1,13 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofadi+One&display=swap");
 
 * {
-  color: rgb(181, 181, 181);
+  color: rgb(255, 255, 255);
   margin: 0;
   padding: 0;
-
-  box-shadow: none;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
+ 
 }
 
 body {
@@ -15,33 +12,21 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  margin-top: 130px;
+ 
 }
 
-#head {
-  justify-content: end;
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  display: flex;
+ 
+#navbarSupportedContent{
 
-  align-items: center;
-  padding-right: 30px;
-  #menu {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-
-    a {
-      transition: 0.5s ease;
-      position: relative;
-    }
-  }
+a{
+  transition: 0.5s ease;
+  position: relative;
+  color: aliceblue;
 }
 
-#head #menu a::before {
+}
+
+  #navbarSupportedContent a::before {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -51,23 +36,18 @@ body {
   transition: 0.3s;
 }
 
-#head #menu a:hover::before {
-  width: 100%;
-}
+#navbarSupportedContent a:hover::before {
+  width: 85%;
+}  
 
-a {
-  text-decoration: none;
-  color: aliceblue;
-  margin: 5px;
-  font-size: 20px;
-}
+.sobre{
 
-header {
-  height: 70px;
-z-index: 999;
-  background-color: rgb(22, 22, 22);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(17, 17, 17, 0.732);
 }
-
+ 
+/* 
 #content {
   display: flex;
   align-items: center;
@@ -109,8 +89,8 @@ z-index: 999;
     align-items: center;
     justify-content: center;
   }
-}
-
+} */
+/* 
 #foto {
   width: 70%;
 
@@ -132,7 +112,7 @@ z-index: 999;
   h1 {
     font-size: 30px;
   }
-}
+} */
 
 .atividades {
   display: flex;
@@ -145,6 +125,15 @@ z-index: 999;
   justify-content: space-evenly;
   flex-wrap: wrap;
   row-gap: 50px;
+
+
+  a {
+    text-decoration: none;
+    color: rgb(255, 3, 3);
+    margin: 5px;
+    font-size: 20px;
+  }
+
 
   div {
     display: flex;
@@ -171,6 +160,8 @@ z-index: 999;
       height: 110px;
     }
 
+
+    
     p {
       color: aliceblue;
       padding-top: 5px;
@@ -187,7 +178,16 @@ z-index: 999;
   }
 }
 
-#titulo {
+
+.titulo{
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(17, 17, 17, 0.732);
+
+
+}
+
+/* #titulo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,8 +205,8 @@ z-index: 999;
     border-radius: 10px;
     color: aliceblue;
   }
-}
-
+} */
+/* 
 footer {
   background-color: rgb(29, 29, 29);
   display: flex;
@@ -218,7 +218,7 @@ footer {
     padding: 20px;
     text-align: center;
   }
-}
+} */
 
 @media (max-width: 600px) {
   #head {
