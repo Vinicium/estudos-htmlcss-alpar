@@ -7,8 +7,10 @@ redirecionar para uma tela que exibirá dados, buscando no localStorage. Se não
 um erro abaixo da senha.
 Cada uma das subclasses deve sobrescrever o método exibirPerfil() para incluir suas
 informações adicionais.
+
 Depois, crie instâncias de Aluno e Professor e chame o método exibirPerfil() de cada uma
 para ver os diferentes comportamentos no console.
+
 Dica: você pode usar innerHTML += ‘...’ para mostrar os dados na página.
 Dica: Use window.location.href para redirecionar entre páginas.
 Guarde esse desafio no repositório de sempre na pasta: sistema-escolar  */
@@ -32,7 +34,7 @@ const usuarios = [
   const usuario = usuarios.find(
     (u) => u.email === email && u.password === senha
   );
-  
+
   localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
 
   if (usuario) {
