@@ -59,6 +59,17 @@ class usuario {
     console.log(`Email: ${this.email}`);
     console.log(`Senha: ${this.password}`);
   }
+
+  exibirPerfilAlert() {
+    alert(
+      `Perfil do Usuário\n\n` +
+      `Nome: ${this.name}\n` +
+      `Email: ${this.email}\n` +
+      `Senha: ${this.password}`
+    );
+  }
+  
+
 }
 
 /* const usuario1 = new usuario("kevin", "@gmail", "senha");
@@ -85,6 +96,18 @@ class aluno extends usuario {
     console.log(`Turma: ${this.turma}`);
   }
 
+  exibirPerfilAlert() {
+    alert(
+      `Perfil do Usuário\n\n` +
+      `Nome: ${this.name}\n` +
+      `Email: ${this.email}\n` +
+      `Senha: ${this.password}`+
+      `Turma: ${this.turma}`
+    );
+  }
+  
+
+
 }
 
 class professor extends usuario {
@@ -107,4 +130,15 @@ class professor extends usuario {
     console.log(`Matérias: ${this.materias}`);
   }
 
+  exibirPerfilAlert() {
+    alert(
+      `Perfil do Usuário\n\n` +
+      `Nome: ${this.name}\n` +
+      `Email: ${this.email}\n` +
+      `Senha: ${this.password}`+
+      `Matérias: ${this.materias}`
+    );
+  }
+  
+  
 }

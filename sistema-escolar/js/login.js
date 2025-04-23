@@ -35,10 +35,11 @@ const usuarios = [
     (u) => u.email === email && u.password === senha
   );
 
-  localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+  
 
   if (usuario) {
     window.location.href = "dados.html";
+    localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
   } else {
     alert("Email ou senha invalidos!");
   }

@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados</title>
+  
+    <script src="js/classes.js"></script>  
 </head>
 <body>
     ola
+
+ 
+ 
+
+ 
+    <script>
+      const dados = JSON.parse(localStorage.getItem("usuarioLogado"));
+    
+      if (dados) {
+        let Usuario;
+    
+        if (dados.turma) {
+          usuario = new aluno(dados._name, dados._email, dados._password, dados._turma);
+        } else if (dados.materias) {
+          usuario = new professor(dados._name, dados._email, dados._password, dados._materias);
+        } else {
+          usuario = new usuario(dados._name, dados._email, dados._password);
+        }
+    
+        usuario.exibirPerfilAlert();
+      } else {
+        alert("Nenhum usuário logado.");
+      }
+    </script>
+    
+    
 </body>
 </html>
