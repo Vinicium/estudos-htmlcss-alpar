@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.titulo {
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.port a {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.171);
+  padding: 5px;
+  border-radius: 5px;
+  width: 4%;
+
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.port a:hover {
+  background-color: rgba(255, 255, 255, 0.464);
+  transform: scale(1.2);
+}
+
+.fundo{
+
+  background-color: rgb(124, 124, 124);
+}
+
+.luzes {
+  margin: 0px 200px 0px 200px;
+  display: flex;
+  flex-direction: row;
+  row-gap: 10px;
+  justify-content: center;
+  text-align: center;
+  column-gap: 10px;
+}
+
+.comodo {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  width: 20%;
+  height: 100px;
+
+  button {
+    margin: auto;
+  }
+}
+
+.comodo.luz-acesa {
+  background-color: #ffff99;
+}
+
+button {
+  margin-right: 10px;
+  height: 25px;
+  width: 55px;
+}
