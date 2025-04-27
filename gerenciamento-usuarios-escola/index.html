@@ -1,0 +1,79 @@
+<!-- Vamos iniciar a construção de um app AngularJS para gerenciar usuários (alunos e
+professores).
+Objetivo:
+Exibir uma mensagem simples na tela utilizando os principais recursos iniciais do
+AngularJS.
+Requisitos:
+Crie uma estrutura HTML com:
+Tag ng-app para iniciar a aplicação
+Um ng-controller chamado AppController
+
+No controller, crie uma variável mensagem com o valor:
+
+"Bem-vindo ao sistema de cadastro escolar"
+
+Use ng-bind para exibir essa mensagem na tela.
+
+Adicione mais uma variável usuario = { nome: "João", tipo: "Aluno" }
+e mostre os dados do usuário na tela com {{ }} ou ng-bind.
+
+Mostre uma imagem condicional com ng-if, dependendo se o tipo do usuário é "Aluno" ou
+"Professor"
+Guarde esse desafio no repositório de sempre na pasta: gerenciamento-usuarios-escola
+ -->
+
+<!DOCTYPE html>
+<html ng-app="module" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento Usuario</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+
+</head>
+
+<body ng-controller="AppController">
+
+    <main class="conteudo">
+
+
+        <div>
+            <h2 ng-bind="mensagem"></h2>
+
+            <label>Ola <span ng-bind="usuario.nome"></span></label>
+
+
+            <span ng-if="usuario.tipo === 'Aluno'">
+
+                <span ng-bind="usuario.tipo"></span>
+                <div><img src="assets/images/aluno.jpg" alt=""></div>
+
+            </span>
+
+
+        </div>
+
+
+    </main>
+
+
+
+
+
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
