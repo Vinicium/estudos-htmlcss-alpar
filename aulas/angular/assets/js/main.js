@@ -2,16 +2,23 @@ const app = angular.module("taskModule", []);
 
 app.controller("TaskController", function ($scope) {
   $scope.tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+  $scope.showCompletedOnly = false;
+  $scope.showIncocompletedOnly = false;
+  $scope.showToday = false;
+  $scope.today = new Date().toLocaleDateString();
+  $scope.modalActive = false;
 
   $scope.taskInput = {
     title: "",
     date: "",
   };
 
-  $scope.modalActive = false;
   $scope.toggleModal = () => {
     $scope.modalActive = !$scope.modalActive;
   };
+
+ 
+
 
   $scope.handleSubmitAddTask = () => {
     console.log($scope.taskInput.title, $scope.taskInput.date);
@@ -32,18 +39,14 @@ app.controller("TaskController", function ($scope) {
     $scope.taskInput.title = "";
   };
 
-  $scope.toggleTaskChecked= () => {
+  $scope.toggleTaskChecked = () => {};
 
+  $scope.toggleCheckedTask = () => {
+    localStorage.setItem("tasks", JSON.stringify($scope.tasks));
   };
 
-  $scope.toggleCheckedTask = ()=>{
-    localStorage.setItem("tasks", JSON.stringify($scope.tasks));
-  }
-
   $scope.deleteTask = (currentTask) => {
-    $scope.tasks = $scope.tasks.filter(task => task.id !== currentTask.id)
+    $scope.tasks = $scope.tasks.filter((task) => task.id !== currentTask.id);
     localStorage.setItem("tasks", JSON.stringify($scope.tasks));
-  };  
-
-
+  };
 });

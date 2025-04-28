@@ -27,11 +27,40 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+
   flex-direction: column;
   background: var(--medium--color);
-  margin: 5% 20%;
+  margin: 5% 10%;
   img {
     margin-top: 1rem;
   }
+}
+
+.conteudo h2 {
+  margin-top: 10px;
+}
+
+.dados {
+  margin: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: separate;
+
+}
+
+.dados tr {
+  color: var(--dark--color);
+  background-color: var(--light--color);
+  width: 7rem;
+}
+
+.dados th {
+  width: 20rem;
+}
+
+.filters{
+
+  margin: 1.0rem;
+
+
 }

@@ -35,17 +35,17 @@
 
         <section class="filters">
             <label class="checkbox">
-                <input type="checkbox">
+                <input type="checkbox" ng-model="showCompletedOnly">
                 <span></span>
                 Completas
             </label>
             <label class="checkbox">
-                <input type="checkbox">
+                <input type="checkbox" ng-model="showIncocompletedOnly">
                 <span></span>
                 Incompletas
             </label>
             <label class="checkbox">
-                <input type="checkbox">
+                <input type="checkbox" ng-model="showToday">
                 <span></span>
                 Para hoje
             </label>
@@ -55,13 +55,15 @@
 
 
     <main id="content">
-        <article ng-repeat="task in tasks" class="task" ng-class="{'checked': task.checked}">
+        <article ng-repeat="task in tasks | orderBy: 'checked' | filter: (showCompletedOnly ? { checked: true } : {}) | filter: (showIncocompletedOnly ? { checked: false } : {}) | filter: (showToday ? { dateStr: today } : {})" class="task" ng-class="{'checked': task.checked}">
+            
             <label class="checkbox">
                 <input type="checkbox" ng-model="task.checked" ng-change="toggleCheckedTask()">
                 <span></span>
                 <h3 ng-bind="task.title"> </h3>
                 <p class="date" ng-bind="task.dateStr"></p>
             </label>
+            
             <button type="button" ng-click="deleteTask(task)">
                 <span class="material-symbols-outlined">
                     delete
@@ -69,7 +71,7 @@
             </button>
         </article>
 
-        <p ng-hide="!!tasks.length" class="empt" >Nenhuma tarefa cadastrada.</p>
+        <p ng-show="(tasks | filter: (showCompletedOnly ? { checked: true } : {}) | filter: (showIncocompletedOnly ? { checked: false } : {}) | filter: (showToday ? { dateStr: today } : {})).length  === 0" class="empt" >Nenhuma tarefa cadastrada.</p>
 
     </main>
 

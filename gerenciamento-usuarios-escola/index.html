@@ -47,24 +47,62 @@ Guarde esse desafio no repositório de sempre na pasta: gerenciamento-usuarios-e
 
 <body ng-controller="AppController">
 
+
     <main class="conteudo">
 
 
         <div>
             <h2 ng-bind="mensagem"></h2>
 
-            <label>Ola <span ng-bind="usuario.nome"></span></label>
+       
 
+            <section class="filters">
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="showAluno">
+                    <span></span>
+                    Aluno
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="showProfessor">
+                    <span></span>
+                    Professor
+                </label>
 
-            <span ng-if="usuario.tipo === 'Aluno'">
+                <span> Usuarios: {{ (usuarios | filter: (showAluno ? {tipo: 'Aluno'} : {}) | filter: (showProfessor ? {tipo: 'Professor'} : {})).length }}</span>
+               
+            </section>
 
-                <span ng-bind="usuario.tipo"></span>
-                <div><img src="assets/images/aluno.jpg" alt=""></div>
-
-            </span>
-
+ 
 
         </div>
+
+        <article >
+
+          
+                <table class="dados" >
+                    <tr>
+
+                        <th>Nome</th>
+                        <th>Tipo</th>
+                        <th>Data</th>
+                    </tr>
+                    <tr ng-repeat="user in usuarios | filter: (showAluno ? {tipo: 'Aluno'} : {}) | filter: (showProfessor ? {tipo: 'Professor'} : {})">
+                        <td>
+                            <span ng-bind="user.nome | uppercase"></span>
+                        </td>
+                        <td>
+                            <span ng-bind="user.tipo"></span>
+                        </td>
+                        <td>
+                            <span ng-bind="user.dataCadastro | date:'dd/MM/yyyy'"></span>
+                        </td>
+
+                </table>
+
+            
+
+        </article>
+
 
 
     </main>
