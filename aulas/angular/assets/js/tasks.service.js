@@ -1,5 +1,5 @@
 app.factory("TaskService", function () {
-  let tasks = JSON.parse(localStorage.getItem("tasks") || "[]");;
+  let tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
 
   return {
     getTasks() {
@@ -11,14 +11,16 @@ app.factory("TaskService", function () {
         title: taskTitle,
         date: date,
         dateStr: dateStr,
-        checked: false
+        checked: false,
       });
       localStorage.setItem("tasks", JSON.stringify(tasks));
     },
-    removeTask(taskId){
-        tasks = tasks.filter((task) => task.id !== taskId);
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-    
-    }
+    removeTask(taskId) {
+      tasks = tasks.filter((task) => task.id !== taskId);
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    },
+    toggleCheck() {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    },
   };
 });

@@ -60,7 +60,7 @@
             class="task" ng-class="{'checked': task.checked}">
 
             <label class="checkbox">
-                <input type="checkbox" ng-model="task.checked" ng-change="toggleCheckedTask()">
+                <input type="checkbox" ng-model="task.checked" ng-change="toggleCheckedTask(tasks)">
                 <span></span>
                 <h3 ng-bind="task.title"> </h3>
                 <p class="date" ng-bind="task.dateStr"></p>
