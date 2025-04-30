@@ -7,7 +7,8 @@
     <title>Gerenciamento Usuario</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
@@ -27,7 +28,8 @@
                     <span></span>
                     Professor
                 </label>
-                <span> Usuarios: {{ (usuarios | filter: (showAluno ? {tipo: 'Aluno'} : {}) | filter: (showProfessor ? {tipo: 'Professor'} : {})).length }}</span>
+                <span> Usuarios: {{ (usuarios | filter: (showAluno ? {tipo: 'Aluno'} : {}) | filter: (showProfessor ?
+                    {tipo: 'Professor'} : {})).length }}</span>
             </section>
         </div>
 
@@ -39,7 +41,8 @@
                     <th>Data</th>
                     <th>Ações</th>
                 </tr>
-                <tr ng-repeat="user in usuarios | filter: (showAluno ? {tipo: 'Aluno'} : {}) | filter: (showProfessor ? {tipo: 'Professor'} : {})">
+                <tr
+                    ng-repeat="user in usuarios | filter: (showAluno ? {tipo: 'Aluno'} : {}) | filter: (showProfessor ? {tipo: 'Professor'} : {})">
                     <td><span ng-bind="user.nome | uppercase"></span></td>
                     <td><span ng-bind="user.tipo"></span></td>
                     <td><span ng-bind="user.dataCadastro | date:'dd/MM/yyyy'"></span></td>
@@ -59,7 +62,13 @@
         </article>
     </main>
 
-    <script src="assets/js/index.js"></script>
+    <script>
+        const app = angular.module("module", []);
+
+    </script>
+
+    <script src="assets/js/index.service.js"></script>
+    <script src="assets/js/index.controller.js"></script>
 </body>
 
 </html>
