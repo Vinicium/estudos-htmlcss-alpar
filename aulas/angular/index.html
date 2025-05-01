@@ -94,24 +94,30 @@
 
             <h2>Adicionar uma tarefa</h2>
 
-            <form ng-submit="handleSubmitAddTask()">
+            <form name="form" ng-submit="handleSubmitAddTask()">
 
                 <label>
                     <p>Nome</p>
-                    <input type="text" placeholder="Nome da tarefa" ng-model="taskInput.title">
+
+                    <input type="text" name="title" placeholder="Nome da tarefa" ng-model="taskInput.title" ng-required="true" ng-minLength="1" ng-style="validate(form.title.$error, form.title.$touched )">
+
 
                 </label>
 
                 <label>
                     <p>Data</p>
-                    <input type="date" ng-model="taskInput.date">
+                    <input type="date" ng-model="taskInput.date" ng-required="true" ng-style="validate(form.title.$error, form.title.$touched )">
                 </label>
 
-                <button class="send" type="submit">Adicionar</button>
+                <button class="send" type="submit" ng-disabled="!form.$valid">Adicionar</button>
 
             </form>
         </div>
     </aside>
+
+
+
+
     
     <script>
         const app = angular.module("taskModule", []);

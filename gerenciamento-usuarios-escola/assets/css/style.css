@@ -25,19 +25,21 @@ body {
 .conteudo {
   display: flex;
   text-align: center;
-  justify-content: center;
-  align-items: center;
 
+  align-items: center;
+  min-height: 80vh;
   flex-direction: column;
   background: var(--medium--color);
   margin: 5% 10%;
+  border-radius: 5px;
   img {
     margin-top: 1rem;
   }
 }
 
 .conteudo h2 {
-  margin-top: 10px;
+  margin-top: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .dados {
@@ -45,7 +47,6 @@ body {
   border-radius: 10px;
   overflow: hidden;
   border-collapse: separate;
-
 }
 
 .dados tr {
@@ -58,13 +59,59 @@ body {
   width: 20rem;
 }
 
-.filters{
+.checkbox {
+  margin: 0 1rem;
+}
 
-  margin: 1.0rem;
+.input {
+  margin: 1rem;
+  position: fixed;
+  bottom: 12%;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
 
+  input {
+    border-radius: 5px;
+    height: 2.1rem;
+    padding: 0.5rem;
+  }
+}
+
+.mensagem {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 5rem;
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side, #ffffff9c 90%, #0000) 0 /
+    calc(100% / 3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: l1 1s steps(4) infinite;
+}
+@keyframes l1 {
+  to {
+    clip-path: inset(0 -34% 0 0);
+  }
+}
+
+.port {
+  color: rgba(255, 255, 255, 0.573);
+  position: fixed;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-decoration: none;
+
+  transition: all 0.3s ease; 
 
 }
 
-.input{
-  margin: 1.0rem;
+.port:hover {
+  color: #ffffff;         /* muda a cor do texto */
+  transform: scale(1.05); /* aumenta levemente */
 }

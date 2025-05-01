@@ -1,0 +1,24 @@
+Essa é uma continuação do desafio anterior.
+Agora vamos validar um formulário de cadastro de usuários e simular uma requisição
+assíncrona com Promises, como se fosse um envio para um servidor.
+Objetivo:
+Validar um formulário antes de cadastrar o usuário e simular uma resposta com Promise.
+Requisitos:
+
+Crie um formulário com campos:
+
+ nome (obrigatório)
+ email (obrigatório e com validação de e-mail)
+ tipo (select com Aluno ou Professor)
+
+Mostre mensagens de erro em tempo real usando AngularJS ($error, ng-show, etc.)
+Ao enviar o formulário:
+
+ Chame um método UsuarioService.salvar(usuario) que retorna uma Promise
+ Dentro do método, setTimeout para simular um atraso na api.
+ Após a resposta, adicione o usuário ao array e mostre uma mensagem de sucesso
+ Bloqueie o botão de envio enquanto estiver “salvando”.
+ Mostre uma animação de "Carregando..." durante o tempo de espera da promise
+ Limpe o formulário após o cadastro
+
+

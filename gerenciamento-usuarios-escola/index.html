@@ -2,73 +2,103 @@
 <html ng-app="module" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciamento Usuario</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento Usuario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 
 <body ng-controller="AppController">
-    <main class="conteudo">
-        <div>
-            <h2 ng-bind="mensagem"></h2>
-            <section class="filters">
-                <label class="checkbox">
-                    <input type="checkbox" ng-model="showAluno">
-                    <span></span>
-                    Aluno
-                </label>
-                <label class="checkbox">
-                    <input type="checkbox" ng-model="showProfessor">
-                    <span></span>
-                    Professor
-                </label>
-                <span> Usuarios: {{ (usuarios | filter: (showAluno ? {tipo: 'Aluno'} : {}) | filter: (showProfessor ?
-                    {tipo: 'Professor'} : {})).length }}</span>
-            </section>
+  <main class="conteudo">
+    <div>
+      <h2 ng-bind="mensagem"></h2>
+
+      <section class="filters">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="showAluno">
+          <span></span>
+          Aluno
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" ng-model="showProfessor">
+          <span></span>
+          Professor
+        </label>
+        <span> Usuarios: {{ (usuarios | filter: (showAluno ? {tipo: 'Aluno'} : {}) | filter: (showProfessor ? {tipo:
+          'Professor'} : {})).length }}</span>
+      </section>
+    </div>
+
+    <article class="art">
+      <table class="dados">
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Tipo</th>
+          <th>Data</th>
+          <th>Ações</th>
+        </tr>
+        <tr
+          ng-repeat="user in usuarios | filter: (showAluno ? {tipo: 'Aluno'} : {}) | filter: (showProfessor ? {tipo: 'Professor'} : {})">
+          <td><span ng-bind="user.nome | uppercase"></span></td>
+          <td><span ng-bind="user.email"></span></td>
+          <td><span ng-bind="user.tipo"></span></td>
+          <td><span ng-bind="user.dataCadastro | date:'dd/MM/yyyy'"></span></td>
+          <td><button ng-click="removerUsuario($index)">Remover</button></td>
+        </tr>
+      </table>
+
+      <form name="formUsuario" ng-submit="adicionarUsuario()" class="input" novalidate>
+
+
+        <div class="mensagem">
+          <div ng-show="carregando" class="loader"></div>
+          <div ng-show="mensagemSucesso">{{mensagemSucesso}}</div>
         </div>
 
-        <article>
-            <table class="dados">
-                <tr>
-                    <th>Nome</th>
-                    <th>Tipo</th>
-                    <th>Data</th>
-                    <th>Ações</th>
-                </tr>
-                <tr
-                    ng-repeat="user in usuarios | filter: (showAluno ? {tipo: 'Aluno'} : {}) | filter: (showProfessor ? {tipo: 'Professor'} : {})">
-                    <td><span ng-bind="user.nome | uppercase"></span></td>
-                    <td><span ng-bind="user.tipo"></span></td>
-                    <td><span ng-bind="user.dataCadastro | date:'dd/MM/yyyy'"></span></td>
-                    <td><button ng-click="removerUsuario($index)">Remover</button></td>
-                </tr>
-            </table>
 
-            <form ng-submit="adicionarUsuario()" class="input">
-                <input type="text" ng-model="novoUsuario.nome" placeholder="Nome" required>
-                <select ng-model="novoUsuario.tipo" required>
-                    <option value="" disabled selected>Selecione o tipo</option>
-                    <option value="Aluno">Aluno</option>
-                    <option value="Professor">Professor</option>
-                </select>
-                <button type="submit">Adicionar Usuario</button>
-            </form>
-        </article>
-    </main>
+        <input type="text" name="nome" ng-model="novoUsuario.nome" placeholder="Nome" ng-required="true" ng-style="{
+          'border-color': formUsuario.nome.$touched && formUsuario.nome.$invalid ? '#ff9999' : ''
+        }">
 
-    <script>
-        const app = angular.module("module", []);
 
-    </script>
+        <input type="email" name="email" ng-model="novoUsuario.email" placeholder="Email" ng-required="true" ng-style="{
+          'border-color': formUsuario.email.$touched && formUsuario.email.$invalid ? '#ff9999' : ''
+        }">
 
-    <script src="assets/js/index.service.js"></script>
-    <script src="assets/js/index.controller.js"></script>
+
+
+        <select name="tipo" ng-model="novoUsuario.tipo" ng-required="true">
+          <option value="" disabled selected>Selecione o tipo</option>
+          <option value="Aluno">Aluno</option>
+          <option value="Professor">Professor</option>
+        </select>
+
+
+        <button type="submit" ng-disabled="formUsuario.$invalid || carregando">Adicionar Usuario</button>
+ 
+      </form>
+
+      <a class="port" href="../index.html">
+        Portfolio
+      </a>
+
+    </article>
+
+   
+
+  </main>
+
+  <script>
+    const app = angular.module("module", []);
+  </script>
+  <script src="assets/js/index.service.js"></script>
+  <script src="assets/js/index.controller.js"></script>
 </body>
 
 </html>
