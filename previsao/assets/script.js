@@ -1,7 +1,8 @@
-const apiKey = " ";
+const apiKey = "ced6b1491cd2a537e307b0a0e6b6a71b";
 const lang = "pt_br";
 const units = "metric";
 
+/* 
 const cardEl = document.querySelector(".card");
 const iconEl = document.querySelector(".icon");
 const cidadeEl = document.querySelector(".cidade");
@@ -13,7 +14,9 @@ const humidityEL = document.querySelector(".humidity");
 const fotoEL = document.querySelector(".foto img");
 const fotopEl = document.querySelector(".foto span");
 const inputEL = document.querySelector(".input input");
-const buttonEl = document.querySelector(".input button");
+const buttonEl = document.querySelector(".input button"); 
+
+*/
 
 function callApi() {
 
