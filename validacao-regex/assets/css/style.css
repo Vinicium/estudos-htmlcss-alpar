@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --dark--color: rgb(32, 32, 32);
+  --medium--color: rgb(52, 52, 52);
+  --light--color: aliceblue;
+  --primary--color: rgb(12, 68, 128);
+  --danger--color: rgb(141, 48, 48);
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  max-width: 35rem;
+  margin: 10rem auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.valid {
+  border-color: rgb(1, 232, 120);
+}
+
+.invalid {
+  border-color: rgba(255, 0, 0, 0.715);
+}
+
+.feedback {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.feedback.valid {
+  color: rgb(3, 144, 3);
+}
+
+.feedback.invalid {
+  color: rgb(232, 11, 11);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+
+  text-align: center;
+  cursor: pointer;
+  background-color: #007bffea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0057b3f2;
+}
