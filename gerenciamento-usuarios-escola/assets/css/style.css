@@ -112,6 +112,6 @@ body {
 }
 
 .port:hover {
-  color: #ffffff;         /* muda a cor do texto */
-  transform: scale(1.05); /* aumenta levemente */
+  color: #ffffff;   
+  transform: scale(1.05);  
 }
